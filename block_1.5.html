@@ -6,7 +6,7 @@
 		<link href="styles/block_1.5.css" rel="stylesheet" />
 		<link
 			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+			href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
 		/>
 
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -17,30 +17,54 @@
 			<h1 class="uppercase">Ремонт техники различных брендов</h1>
 		</header>
 		<main>
-			<nav class="company">
-				<img src="images/lenovo.svg" alt="lenovo" width="108px" height="32px" />
-				<a href="#"><div class="circle"></div></a>
-			</nav>
-			<!-- Slider main container -->
 			<div class="swiper">
-				<!-- Additional required wrapper -->
 				<div class="swiper-wrapper">
-					<!-- Slides -->
-					<div class="swiper-slide">Slide 1</div>
-					<div class="swiper-slide">Slide 2</div>
-					<div class="swiper-slide">Slide 3</div>
-					...
+					<div class="swiper-slide">
+						<div class="company">
+							<img
+								src="images/lenovo.svg"
+								alt="lenovo"
+								width="108px"
+								height="32px"
+							/>
+							<a href="#"><div class="circle"></div></a>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="company">
+							<img
+								src="images/lenovo.svg"
+								alt="lenovo"
+								width="108px"
+								height="32px"
+							/>
+							<a href="#"><div class="circle"></div></a>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="company">
+							<img
+								src="images/lenovo.svg"
+								alt="lenovo"
+								width="108px"
+								height="32px"
+							/>
+							<a href="#"><div class="circle"></div></a>
+						</div>
+					</div>
 				</div>
-				<!-- If we need pagination -->
 				<div class="swiper-pagination"></div>
-
-				<!-- If we need navigation buttons -->
-				<div class="swiper-button-prev"></div>
-				<div class="swiper-button-next"></div>
-
-				<!-- If we need scrollbar -->
-				<div class="swiper-scrollbar"></div>
 			</div>
 		</main>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+		<script>
+			const swiper = new Swiper('.swiper', {
+				direction: 'horizontal',
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+			})
+		</script>
 	</body>
 </html>
