@@ -19,7 +19,7 @@
 var init = false
 var swiper
 function swiperCard() {
-	if (window.innerWidth <= 768) {
+	if (window.innerWidth < 768) {
 		if (!init) {
 			init = true
 			swiper = new Swiper('.swiper', {
