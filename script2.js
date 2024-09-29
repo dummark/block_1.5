@@ -47,3 +47,30 @@ function swiperCard() {
 }
 swiperCard()
 window.addEventListener('resize', swiperCard)
+
+/* var popup = document.querySelector('.modal')
+var openPopupButton = document.querySelector('.button-open')
+var closePopupButton = popup.querySelector('.button-close')
+
+openPopupButton.addEventListener('click', function (evt) {
+	evt.preventDefault()
+	popup.classList.add('modal--show')
+})
+
+closePopupButton.addEventListener('click', function (evt) {
+	popup.classList.remove('modal--show')
+})
+	*/
+
+function showCompanies() {
+	'modal--show'
+		.show()(
+			// скрываем элементы
+			'button-open'
+		)
+		.on('click', function () {
+			// указываем кнопку при клике на которую покажутся элементы
+			'modal--show'.open() // показываем элементы
+			appNormalise()
+		})
+}

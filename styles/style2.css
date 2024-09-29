@@ -36,8 +36,8 @@ h1 {
 
 main {
 	margin-top: 20px;
-	padding-left: 25px;
 	padding-right: 15px;
+	padding-left: 25px;
 }
 
 .circle {
@@ -100,14 +100,12 @@ a div:hover {
 	.swiper-wrapper {
 		flex-wrap: wrap;
 		gap: 20px;
-
 		align-items: flex-start;
 	}
 
 	.hide {
 		display: flex;
 		gap: 15px;
-		margin-left: 5px;
 		margin-top: 30px;
 		align-items: center;
 	}
@@ -116,17 +114,22 @@ a div:hover {
 		display: none;
 	}
 
-	.hide a {
+	.hide button {
 		font-family: 'TTLakes-thin', sans-serif;
 		text-decoration: none;
 		color: black;
 		font-weight: 900;
+		border: 0;
+		background-color: #f8f8f8;
 	}
 
-	.hide .close {
-		display: none;
+	button img {
+		margin-right: 15px;
 	}
 }
 
 @media (min-width: 1120px) {
+	.swiper-wrapper .show-1120 {
+		display: flex;
+	}
 }
