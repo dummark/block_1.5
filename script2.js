@@ -1,21 +1,3 @@
-/* new Swiper('.swiper', {
-	slidesPerView: 'auto',
-	spaceBetween: 20,
-	freeMode: true,
-	pagination: {
-		el: '.swiper-pagination',
-		clickable: true,
-	},
-	keyboard: {
-		enabled: true,
-		onlyInViewport: true,
-		pageUpDown: true,
-	},
-	mousewheel: {
-		sensitivity: 1,
-	},
-}) */
-
 var init = false
 var swiper
 function swiperCard() {
@@ -48,29 +30,19 @@ function swiperCard() {
 swiperCard()
 window.addEventListener('resize', swiperCard)
 
-/* var popup = document.querySelector('.modal')
-var openPopupButton = document.querySelector('.button-open')
-var closePopupButton = popup.querySelector('.button-close')
+const toggleButton = document.getElementById('toggleButton')
+const tabletItems = document.querySelectorAll('.hide-768')
+const monitorItems = document.querySelectorAll('.show-1120')
+const arrows = document.querySelectorAll('.arrows')
 
-openPopupButton.addEventListener('click', function (evt) {
-	evt.preventDefault()
-	popup.classList.add('modal--show')
+toggleButton.addEventListener('click', () => {
+	tabletItems.forEach(item => {
+		if (item.style.display === 'none') {
+			item.style.display = 'flex'
+			toggleButton.textContent = 'Скрыть'
+		} else {
+			item.style.display = 'none'
+			toggleButton.textContent = 'Показать все'
+		}
+	})
 })
-
-closePopupButton.addEventListener('click', function (evt) {
-	popup.classList.remove('modal--show')
-})
-	*/
-
-function showCompanies() {
-	'modal--show'
-		.show()(
-			// скрываем элементы
-			'button-open'
-		)
-		.on('click', function () {
-			// указываем кнопку при клике на которую покажутся элементы
-			'modal--show'.open() // показываем элементы
-			appNormalise()
-		})
-}

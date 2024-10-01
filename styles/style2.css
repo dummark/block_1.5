@@ -40,6 +40,24 @@ main {
 	padding-left: 25px;
 }
 
+.swiper-wrapper .swiper-slide {
+	width: 214px;
+	margin-right: 15px;
+}
+
+.company {
+	display: flex;
+	width: 192px;
+	height: 70px;
+	background-color: white;
+	border-radius: 6px;
+	justify-content: space-between;
+	align-items: center;
+	padding-left: 15px;
+	padding-right: 15px;
+	border: solid 1px #eaeaea;
+}
+
 .circle {
 	width: 40px;
 	height: 40px;
@@ -65,19 +83,6 @@ a div:hover {
 
 .swiper {
 	height: 120px;
-}
-
-.swiper-wrapper .swiper-slide {
-	display: flex;
-	width: 192px;
-	height: 70px;
-	background-color: white;
-	border-radius: 6px;
-	justify-content: space-between;
-	align-items: center;
-	padding-left: 15px;
-	padding-right: 15px;
-	border: solid 1px #eaeaea;
 }
 
 .swiper .swiper-pagination-bullet {
@@ -110,7 +115,7 @@ a div:hover {
 		align-items: center;
 	}
 
-	.swiper-wrapper .hide-768 {
+	.hide-768 {
 		display: none;
 	}
 
@@ -129,7 +134,26 @@ a div:hover {
 }
 
 @media (min-width: 1120px) {
-	.swiper-wrapper .show-1120 {
+	.show-1120 {
 		display: flex;
 	}
+}
+
+.arrows {
+	display: inline-block;
+	background-image: url(../images/icon.svg);
+	background-repeat: no-repeat;
+	width: 15px;
+	height: 15px;
+	vertical-align: middle;
+}
+
+.reverse-arrows {
+	display: inline-block;
+	background-image: url(../images/icon.svg);
+	background-repeat: no-repeat;
+	width: 15px;
+	height: 15px;
+	vertical-align: middle;
+	transform: rotate(180deg);
 }
