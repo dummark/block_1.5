@@ -30,19 +30,20 @@ function swiperCard() {
 swiperCard()
 window.addEventListener('resize', swiperCard)
 
-const toggleButton = document.getElementById('toggleButton')
-const tabletItems = document.querySelectorAll('.hide-768')
-const monitorItems = document.querySelectorAll('.show-1120')
-const arrows = document.querySelectorAll('.arrows')
+const toggleButton = document.querySelector('.toggleButton')
+const swiperHeight = document.querySelectorAll('.swiper')
+const arrows = document.querySelector('.arrows')
 
 toggleButton.addEventListener('click', () => {
-	tabletItems.forEach(item => {
-		if (item.style.display === 'none') {
-			item.style.display = 'flex'
-			toggleButton.textContent = 'Скрыть'
-		} else {
-			item.style.display = 'none'
+	swiperHeight.forEach(item => {
+		if (toggleButton.textContent == 'Скрыть') {
+			item.style.height = '170px'
 			toggleButton.textContent = 'Показать все'
+			arrows.src = 'images/arrows.svg'
+		} else {
+			item.style.height = 'auto'
+			toggleButton.textContent = 'Скрыть'
+			arrows.src = 'images/arrowsreverse.svg'
 		}
 	})
 })

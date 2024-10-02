@@ -99,10 +99,12 @@ a div:hover {
 
 @media (min-width: 768px) {
 	.swiper {
-		height: auto;
+		height: 170px;
 	}
 
-	.swiper-wrapper {
+	.swiper .swiper-wrapper {
+		height: auto;
+		display: flex;
 		flex-wrap: wrap;
 		gap: 20px;
 		align-items: flex-start;
@@ -113,10 +115,6 @@ a div:hover {
 		gap: 15px;
 		margin-top: 30px;
 		align-items: center;
-	}
-
-	.hide-768 {
-		display: none;
 	}
 
 	.hide button {
@@ -131,29 +129,4 @@ a div:hover {
 	button img {
 		margin-right: 15px;
 	}
-}
-
-@media (min-width: 1120px) {
-	.show-1120 {
-		display: flex;
-	}
-}
-
-.arrows {
-	display: inline-block;
-	background-image: url(../images/icon.svg);
-	background-repeat: no-repeat;
-	width: 15px;
-	height: 15px;
-	vertical-align: middle;
-}
-
-.reverse-arrows {
-	display: inline-block;
-	background-image: url(../images/icon.svg);
-	background-repeat: no-repeat;
-	width: 15px;
-	height: 15px;
-	vertical-align: middle;
-	transform: rotate(180deg);
 }
