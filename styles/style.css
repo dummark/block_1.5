@@ -20,7 +20,7 @@ header {
 	min-height: 56px;
 	height: auto;
 	display: flex;
-	background-color: white;
+	background: linear-gradient(to right, #f8f8f8, white);
 	align-items: center;
 }
 
@@ -34,22 +34,37 @@ h1 {
 	text-transform: uppercase;
 }
 
+.swiper {
+	height: 120px;
+}
+
 main {
 	margin-top: 20px;
-	padding-left: 15px;
+	padding-right: 15px;
+	padding-left: 25px;
+}
+
+.swiper-wrapper {
+	display: flex;
+	gap: 15px;
+}
+
+.swiper-wrapper .swiper-slide {
+	width: 214px;
+	margin-right: 15px;
 }
 
 .company {
 	display: flex;
-	width: 210px;
-	height: 72px;
+	width: 192px;
+	height: 70px;
 	background-color: white;
 	border-radius: 6px;
 	justify-content: space-between;
 	align-items: center;
 	padding-left: 15px;
 	padding-right: 15px;
-	box-shadow: 0px 0px 10px 2px rgba(146, 146, 146, 0.2);
+	border: solid 1px #eaeaea;
 }
 
 .circle {
@@ -75,23 +90,7 @@ a div:hover {
 	transition-timing-function: ease;
 }
 
-.swiper {
-	width: 100%;
-	height: 120px;
-}
-
-.logo-swiper .swiper-wrapper {
-	display: flex;
-}
-
-.logo-swiper .swiper-slide {
-	display: flex;
-	justify-content: right;
-	width: 240px;
-	height: 72px;
-}
-
-.logo-swiper .swiper-pagination-bullet {
+.swiper .swiper-pagination-bullet {
 	width: 12px;
 	height: 12px;
 	line-height: 12px;
@@ -99,14 +98,40 @@ a div:hover {
 	background-color: #b5b6bc;
 }
 
-.logo-swiper img {
-	width: 108px;
-	height: 32px;
+.hide {
+	display: none;
 }
 
-@media (min-width: 768x) {
-	.main-container {
+@media (min-width: 768px) {
+	.swiper {
+		height: 170px;
+	}
+
+	.swiper .swiper-wrapper {
+		height: auto;
 		display: flex;
 		flex-wrap: wrap;
+		gap: 20px;
+		align-items: flex-start;
+	}
+
+	.hide {
+		display: flex;
+		gap: 15px;
+		margin-top: 30px;
+		align-items: center;
+	}
+
+	.hide button {
+		font-family: 'TTLakes-thin', sans-serif;
+		text-decoration: none;
+		color: black;
+		font-weight: 900;
+		border: 0;
+		background-color: #f8f8f8;
+	}
+
+	button img {
+		margin-right: 15px;
 	}
 }
